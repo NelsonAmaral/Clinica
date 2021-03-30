@@ -6,7 +6,7 @@
   "author": "nelson1089.amaral@gmail.com",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon --require dotenv/config src/server.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",

@@ -1,6 +1,5 @@
 const knex = require('knex');
-require('dotenv').config();
-const configuration = require('../../knexfile');
+const configuration = require('../../knexfile.js');
 
 const connection = knex(configuration.development);
 
