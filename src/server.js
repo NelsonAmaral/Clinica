@@ -1,10 +1,13 @@
 const express = require('express');
+const routes = require('./router');
+const { app_port } = require('./config');
 
 const app = express();
 
 app.use(express.json());
+app.use(routes);
 
-app.listen(process.env.APP_PORT, () => {
-    console.log('Server Start ! -> '+ process.env.APP_PORT)
+app.listen(app_port, () => {
+    console.log('Server Start ! -> '+ app_port)
     // console.log(process.env)
 })
