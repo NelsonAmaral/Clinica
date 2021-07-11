@@ -1,10 +1,11 @@
-const { db_host, db_database, db_password, db_user } = require('./src/config');
+const { db_host, db_database, db_password, db_user, db_port } = require('./src/config/env');
 
   const development = {
     client: 'pg',
     connection: {
       host: db_host,
       user: db_user,
+      port: db_port,
       password: db_password,
       database: db_database
     },
@@ -14,10 +15,10 @@ const { db_host, db_database, db_password, db_user } = require('./src/config');
     },
     migrations:{
       tableName:'knex_migrations',
-      directory: `${__dirname}/src/database/migrations`
+      directory: `${__dirname}/src/config/database/migrations`
     },
     seeds: {
-      directory: `${__dirname}/src/database/seeds`
+      directory: `${__dirname}/src/config/database/seeds`
     }
   }
 
